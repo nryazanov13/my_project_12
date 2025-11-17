@@ -7,7 +7,7 @@ import pages.MainPage;
 
 import static io.qameta.allure.Allure.step;
 
-@DisplayName("Класс для проверки функциональности на странице <Наша история>")
+@DisplayName("Класс для проверки функциональности на странице <<Наша история>>")
 public class CenticoreTests extends TestBase {
 
     private final String
@@ -18,11 +18,11 @@ public class CenticoreTests extends TestBase {
 
     @Test
     @Feature("Проверка таба навигации на главной странице")
-    @Story("Я как пользователь хочу иметь возможность ознакомиться с информацией о компании в разделе <Наша история> за 2024 год")
+    @Story("Я как пользователь хочу иметь возможность ознакомиться с информацией о компании в разделе <<Наша история>> за 2024 год")
     @Owner("NikitaRyazanov")
     @Severity(SeverityLevel.BLOCKER)
     @Link(value = "HistoryPage", url = MAIN_PAGE_URL)
-    @DisplayName("Проверка перехода на раздел <О Нас/Наша история>")
+    @DisplayName("Проверка перехода на раздел <<О Нас/Наша история>>")
     void checkCompanyStoryFor2024OnOurHistoryTab() {
 
         step("Перейти на главную страницу", () -> {
@@ -30,7 +30,7 @@ public class CenticoreTests extends TestBase {
                     .openPage();
         });
 
-        step("Открыть раздел <Наша история>", () -> {
+        step("Открыть раздел <<Наша история>>", () -> {
             mainPage
                     .hoverAboutUsTab()
                     .clickOnOurHistoryTab();
@@ -44,7 +44,7 @@ public class CenticoreTests extends TestBase {
 
     @Test
     @Feature("Проверка таба навигации на главной странице")
-    @Story("Я как пользователь хочу иметь возможность ознакомиться с информацией о разработке ПО в разделе <Услуги>")
+    @Story("Я как пользователь хочу иметь возможность ознакомиться с информацией о разработке ПО в разделе <<Услуги>>")
     @Owner("NikitaRyazanov")
     @Severity(SeverityLevel.BLOCKER)
     @Link(value = "MainPageHeader", url = MAIN_PAGE_URL)
@@ -56,7 +56,7 @@ public class CenticoreTests extends TestBase {
                     .openPage();
         });
 
-        step("Открыть раздел <Разработка ПО>", () -> {
+        step("Открыть раздел <<Разработка ПО>>", () -> {
             mainPage
                     .hoverServicesTab()
                     .clickOnServicesDevelopmentTab();
@@ -71,11 +71,11 @@ public class CenticoreTests extends TestBase {
 
     @Test
     @Feature("Проверка таба навигации на главной странице")
-    @Story("Я как пользователь хочу иметь возможность ознакомиться с информацией о Нефтегазовой промышленности в разделе <Экспертиза>")
+    @Story("Я как пользователь хочу иметь возможность ознакомиться с информацией о Нефтегазовой промышленности в разделе <<Экспертиза>>")
     @Owner("NikitaRyazanov")
     @Severity(SeverityLevel.BLOCKER)
     @Link(value = "MainPageHeader", url = MAIN_PAGE_URL)
-    @DisplayName("Проверка перехода на раздел <Экспертиза/Нефтегазовая промышленность>")
+    @DisplayName("Проверка перехода на раздел <<Экспертиза/Нефтегазовая промышленность>>")
     void checkOilGasOnExpertiseTab () {
 
         step("Перейти на главную страницу", () -> {
@@ -83,7 +83,7 @@ public class CenticoreTests extends TestBase {
                     .openPage();
         });
 
-        step("Открыть раздел <Нефтегазовая промышленность>", () -> {
+        step("Открыть раздел <<Нефтегазовая промышленность>>", () -> {
             mainPage
                     .hoverExpertiseTab()
                     .clickOnOilGasTab();
@@ -97,11 +97,11 @@ public class CenticoreTests extends TestBase {
 
     @Test
     @Feature("Проверка таба навигации на главной странице")
-    @Story("Я как пользователь хочу иметь возможность ознакомиться с информацией о Шторм Блокчейн в разделе <Продукты>")
+    @Story("Я как пользователь хочу иметь возможность ознакомиться с информацией о Шторм Блокчейн в разделе <<Продукты>>")
     @Owner("NikitaRyazanov")
     @Severity(SeverityLevel.BLOCKER)
     @Link(value = "MainPageHeader", url = MAIN_PAGE_URL)
-    @DisplayName("Проверка перехода на раздел <Продукты/Шторм Блокчейн>")
+    @DisplayName("Проверка перехода на раздел <<Продукты/Шторм Блокчейн>>")
     void checkStormBlockChainOnProductsTab () {
 
         step("Перейти на главную страницу", () -> {
@@ -109,7 +109,7 @@ public class CenticoreTests extends TestBase {
                     .openPage();
         });
 
-        step("Открыть раздел <Шторм Блокчейн>", () -> {
+        step("Открыть раздел <<Шторм Блокчейн>>", () -> {
             mainPage
                     .hoverProductTab()
                     .clickOnStormBlockChainTab();
@@ -123,11 +123,11 @@ public class CenticoreTests extends TestBase {
 
     @Test
     @Feature("Проверка таба навигации на главной странице")
-    @Story("Я как пользователь хочу иметь возможность ознакомиться с информацией о Вакансиях в разделе <Карьера>")
+    @Story("Я как пользователь хочу иметь возможность ознакомиться с информацией о Вакансиях в разделе <<Карьера>>")
     @Owner("NikitaRyazanov")
     @Severity(SeverityLevel.BLOCKER)
     @Link(value = "MainPageHeader", url = MAIN_PAGE_URL)
-    @DisplayName("Проверка перехода на раздел <Карьера/Вакансии>")
+    @DisplayName("Проверка перехода на раздел <<Карьера/Вакансии>>")
     void checkVacanciesOnCareerTab () {
 
         step("Перейти на главную страницу", () -> {
@@ -135,7 +135,7 @@ public class CenticoreTests extends TestBase {
                     .openPage();
         });
 
-        step("Открыть раздел <Вакансии>", () -> {
+        step("Открыть раздел <<Вакансии>>", () -> {
             mainPage
                     .hoverCareerTab()
                     .clickOnVacanciesTab();
