@@ -18,12 +18,12 @@ public class CenticoreTests extends TestBase {
 
     @Test
     @Feature("Проверка таба навигации на главной странице")
-    @Story("Я как пользователь хочу иметь возможность ознакомиться с информацией о компании в разделе <Наша история> за определенный год")
+    @Story("Я как пользователь хочу иметь возможность ознакомиться с информацией о компании в разделе <Наша история> за 2024 год")
     @Owner("NikitaRyazanov")
     @Severity(SeverityLevel.BLOCKER)
     @Link(value = "HistoryPage", url = MAIN_PAGE_URL)
-    @DisplayName("Проверка наличия истории за 2024")
-    void checkStoryFor2024() {
+    @DisplayName("Проверка перехода на раздел <О Нас/Наша история>")
+    void checkCompanyStoryFor2024OnOurHistoryTab() {
 
         step("Перейти на главную страницу", () -> {
             mainPage
@@ -38,111 +38,112 @@ public class CenticoreTests extends TestBase {
 
         step("Проверить наличие истроии за 2024 год", () -> {
             mainPage
-                    .checkStoryForCertainYear("2024");
+                    .checkIfStoryIsPresent("2024");
         });
     }
 
     @Test
     @Feature("Проверка таба навигации на главной странице")
-    @Story("Я как пользователь хочу иметь возможность ознакомиться с информацией о компании в разделе <Наша история> за определенный год")
+    @Story("Я как пользователь хочу иметь возможность ознакомиться с информацией о разработке ПО в разделе <Услуги>")
     @Owner("NikitaRyazanov")
     @Severity(SeverityLevel.BLOCKER)
-    @Link(value = "HistoryPage", url = MAIN_PAGE_URL)
-    @DisplayName("Проверка наличия истории за 2023")
-    void checkStoryFor2023() {
+    @Link(value = "MainPageHeader", url = MAIN_PAGE_URL)
+    @DisplayName("Проверка перехода на раздел <Услуги/Разработка ПО>")
+    void checkListOfTechnologiesOnServiceDevelopmentTab () {
 
         step("Перейти на главную страницу", () -> {
             mainPage
                     .openPage();
         });
 
-        step("Открыть раздел <Наша история>", () -> {
+        step("Открыть раздел <Разработка ПО>", () -> {
             mainPage
-                    .hoverAboutUsTab()
-                    .clickOnOurHistoryTab();
+                    .hoverServicesTab()
+                    .clickOnServicesDevelopmentTab();
         });
 
-        step("Проверить наличие истроии за 2023 год", () -> {
+        step("Проверить наличия используемых технологий на странице", () -> {
             mainPage
-                    .checkStoryForCertainYear("2023");
+                    .checkTechnologiesListIsPresent();
         });
     }
 
+
     @Test
     @Feature("Проверка таба навигации на главной странице")
-    @Story("Я как пользователь хочу иметь возможность ознакомиться с информацией о компании в разделе <Наша история> за определенный год")
+    @Story("Я как пользователь хочу иметь возможность ознакомиться с информацией о Нефтегазовой промышленности в разделе <Экспертиза>")
     @Owner("NikitaRyazanov")
     @Severity(SeverityLevel.BLOCKER)
-    @Link(value = "HistoryPage", url = MAIN_PAGE_URL)
-    @DisplayName("Проверка наличия истории за 2022")
-    void checkStoryFor2022() {
+    @Link(value = "MainPageHeader", url = MAIN_PAGE_URL)
+    @DisplayName("Проверка перехода на раздел <Экспертиза/Нефтегазовая промышленность>")
+    void checkOilGasOnExpertiseTab () {
 
         step("Перейти на главную страницу", () -> {
             mainPage
                     .openPage();
         });
 
-        step("Открыть раздел <Наша история>", () -> {
+        step("Открыть раздел <Нефтегазовая промышленность>", () -> {
             mainPage
-                    .hoverAboutUsTab()
-                    .clickOnOurHistoryTab();
+                    .hoverExpertiseTab()
+                    .clickOnOilGasTab();
         });
 
-        step("Проверить наличие истроии за 2022 год", () -> {
+        step("Проверить наличие информации о работе в Нефтегазовой промышенности на странице", () -> {
             mainPage
-                    .checkStoryForCertainYear("2022");
+                    .checkActivityListIsPresent();
         });
     }
 
     @Test
     @Feature("Проверка таба навигации на главной странице")
-    @Story("Я как пользователь хочу иметь возможность ознакомиться с информацией о компании в разделе <Наша история> за определенный год")
+    @Story("Я как пользователь хочу иметь возможность ознакомиться с информацией о Шторм Блокчейн в разделе <Продукты>")
     @Owner("NikitaRyazanov")
     @Severity(SeverityLevel.BLOCKER)
-    @Link(value = "HistoryPage", url = MAIN_PAGE_URL)
-    @DisplayName("Проверка наличия истории за 2021")
-    void checkStoryFor2021() {
+    @Link(value = "MainPageHeader", url = MAIN_PAGE_URL)
+    @DisplayName("Проверка перехода на раздел <Продукты/Шторм Блокчейн>")
+    void checkStormBlockChainOnProductsTab () {
 
         step("Перейти на главную страницу", () -> {
             mainPage
                     .openPage();
         });
 
-        step("Открыть раздел <Наша история>", () -> {
+        step("Открыть раздел <Шторм Блокчейн>", () -> {
             mainPage
-                    .hoverAboutUsTab()
-                    .clickOnOurHistoryTab();
+                    .hoverProductTab()
+                    .clickOnStormBlockChainTab();
         });
 
-        step("Проверить наличие истроии за 2021 год", () -> {
+        step("Проверить наличие информации о преимуществах о Шторм Блокчейн на странице", () -> {
             mainPage
-                    .checkStoryForCertainYear("2021");
+                    .checkProtocolBlockChainListIsPresent();
         });
     }
 
     @Test
     @Feature("Проверка таба навигации на главной странице")
-    @Story("Я как пользователь хочу иметь возможность ознакомиться с информацией о компании в разделе <Наша история> за определенный год")
+    @Story("Я как пользователь хочу иметь возможность ознакомиться с информацией о Вакансиях в разделе <Карьера>")
     @Owner("NikitaRyazanov")
     @Severity(SeverityLevel.BLOCKER)
-    @Link(value = "HistoryPage", url = MAIN_PAGE_URL)
-    @DisplayName("Проверка наличия истории за 2020")
-    void checkStoryFor2020() {
+    @Link(value = "MainPageHeader", url = MAIN_PAGE_URL)
+    @DisplayName("Проверка перехода на раздел <Карьера/Вакансии>")
+    void checkVacanciesOnCareerTab () {
 
         step("Перейти на главную страницу", () -> {
             mainPage
                     .openPage();
         });
 
-        step("Открыть раздел <Наша история>", () -> {
+        step("Открыть раздел <Вакансии>", () -> {
             mainPage
-                    .hoverAboutUsTab()
-                    .clickOnOurHistoryTab();
+                    .hoverCareerTab()
+                    .clickOnVacanciesTab();
         });
 
-        step("Проверить наличие истроии за 2020 год", () -> {
+        step("Проверить наличие информации о вакансиях на странице", () -> {
             mainPage
-                    .checkStoryForCertainYear("2020");
+                    .checkVacanciesListIsPresent();
         });
     }
 }
