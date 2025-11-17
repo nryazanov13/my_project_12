@@ -25,7 +25,6 @@ public class TestBase {
         Configuration.browser = System.getProperty("browser", "chrome");
         Configuration.baseUrl = "https://centicore.ru";
         Configuration.pageLoadStrategy = "eager";
-        Configuration.holdBrowserOpen = true;
 
         // Получаем параметры
         String remoteHost = System.getProperty("remoteHost");
