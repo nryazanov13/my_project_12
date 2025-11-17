@@ -1,5 +1,8 @@
 HELP.md
-notifications/config.json
+
+notifications/.config.json
+!notifications/*.jar
+
 build/
 .gradle/
 gradle/
