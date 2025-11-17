@@ -7,7 +7,7 @@ import pages.MainPage;
 
 import static io.qameta.allure.Allure.step;
 
-@DisplayName("Класс для проверки функциональности на странице «Наша история»")
+@DisplayName("Класс для проверки функциональности переходов на главной странице")
 public class CenticoreTests extends TestBase {
 
     private final String
