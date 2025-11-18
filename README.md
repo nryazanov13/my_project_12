@@ -1,8 +1,7 @@
 ## <a href="https://escape-room-neon.vercel.app/"><img alt="EscapeRoom" height="52" src="images/logo/logo.svg" width="134"/></a>
 # Проект по автоматизации тестирования для компании [Centicore](https://centicore.ru/)
 
-* Проект Escape Room — ученический проект по фронтенд-разработке от HTML-Академии.
-* [Репозиторий с проектом](https://github.com/JulianaAstra/Escape_Room)
+* [Репозиторий с проектом](https://github.com/nryazanov13/my_project_12/blob/master/README.md)
 
 ## **Содержание:**
 ____
@@ -59,7 +58,6 @@ ____
 - *browser (браузер, по умолчанию chrome)*
 - *version (версия браузера, по умолчанию 128)*
 - *windowSize (размер окна браузера, по умолчанию 1920x1080)*
-- *baseUrl (адрес тестируемого веб-сайта)*
 - *remoteHost (адрес удаленного сервера Selenoid)*
 
 <a id="console"></a>
