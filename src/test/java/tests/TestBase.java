@@ -12,6 +12,7 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.remote.DesiredCapabilities;
+
 import java.util.Map;
 
 
@@ -26,12 +27,10 @@ public class TestBase {
         Configuration.baseUrl = "https://centicore.ru";
         Configuration.pageLoadStrategy = "eager";
 
-        // Получаем параметры
         String remoteHost = System.getProperty("remoteHost");
         String login = config.login();
         String password = config.password();
 
-        // Проверяем, что remoteHost задан (для удаленного запуска)
         if (remoteHost != null && !remoteHost.isEmpty()) {
             Configuration.remote = String.format("https://%s:%s@%s/wd/hub", login, password, remoteHost);
 
@@ -45,7 +44,7 @@ public class TestBase {
     }
 
     @BeforeEach
-    void initialSetUp (){
+    void initialSetUp() {
         SelenideLogger.addListener("allure", new AllureSelenide());
     }
 

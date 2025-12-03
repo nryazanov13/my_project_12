@@ -3,9 +3,7 @@ package tests;
 import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import pages.MainPage;
-
-import static io.qameta.allure.Allure.step;
+import pages.*;
 
 @DisplayName("Класс для проверки функциональности переходов на главной странице")
 public class CenticoreTests extends TestBase {
@@ -14,7 +12,12 @@ public class CenticoreTests extends TestBase {
             MAIN_PAGE_URL = "https://centicore.ru";
 
     MainPage mainPage = new MainPage();
-
+    CareerPage careerPage = new CareerPage();
+    OilGasPage oilGasPage = new OilGasPage();
+    OurHistoryPage ourHistoryPage = new OurHistoryPage();
+    ServiceDevelopmentPage serviceDevelopmentPage = new ServiceDevelopmentPage();
+    StormBlockChainPage stormBlockChainPage = new
+            StormBlockChainPage();
 
     @Test
     @Feature("Проверка таба навигации на главной странице")
@@ -25,21 +28,13 @@ public class CenticoreTests extends TestBase {
     @DisplayName("Проверка перехода на раздел «О Нас/Наша история»")
     void checkCompanyStoryFor2024OnOurHistoryTab() {
 
-        step("Перейти на главную страницу", () -> {
-            mainPage
-                    .openPage();
-        });
+        mainPage
+                .openPage()
+                .hoverAboutUsTab()
+                .clickOnOurHistoryTab();
 
-        step("Открыть раздел «Наша история»", () -> {
-            mainPage
-                    .hoverAboutUsTab()
-                    .clickOnOurHistoryTab();
-        });
-
-        step("Проверить наличие истории за 2024 год", () -> {
-            mainPage
-                    .checkIfStoryIsPresent("2024");
-        });
+        ourHistoryPage
+                .checkIfStoryIsPresent("2024");
     }
 
     @Test
@@ -49,23 +44,15 @@ public class CenticoreTests extends TestBase {
     @Severity(SeverityLevel.BLOCKER)
     @Link(value = "MainPageHeader", url = MAIN_PAGE_URL)
     @DisplayName("Проверка перехода на раздел «Услуги/Разработка ПО»")
-    void checkListOfTechnologiesOnServiceDevelopmentTab () {
+    void checkListOfTechnologiesOnServiceDevelopmentTab() {
 
-        step("Перейти на главную страницу", () -> {
-            mainPage
-                    .openPage();
-        });
+        mainPage
+                .openPage()
+                .hoverServicesTab()
+                .clickOnServicesDevelopmentTab();
 
-        step("Открыть раздел «Разработка ПО»", () -> {
-            mainPage
-                    .hoverServicesTab()
-                    .clickOnServicesDevelopmentTab();
-        });
-
-        step("Проверить наличие используемых технологий на странице", () -> {
-            mainPage
-                    .checkTechnologiesListIsPresent();
-        });
+        serviceDevelopmentPage
+                .checkTechnologiesListIsPresent();
     }
 
 
@@ -76,23 +63,15 @@ public class CenticoreTests extends TestBase {
     @Severity(SeverityLevel.BLOCKER)
     @Link(value = "MainPageHeader", url = MAIN_PAGE_URL)
     @DisplayName("Проверка перехода на раздел «Экспертиза/Нефтегазовая промышленность»")
-    void checkOilGasOnExpertiseTab () {
+    void checkOilGasOnExpertiseTab() {
 
-        step("Перейти на главную страницу", () -> {
-            mainPage
-                    .openPage();
-        });
+        mainPage
+                .openPage()
+                .hoverExpertiseTab()
+                .clickOnOilGasTab();
 
-        step("Открыть раздел «Нефтегазовая промышленность»", () -> {
-            mainPage
-                    .hoverExpertiseTab()
-                    .clickOnOilGasTab();
-        });
-
-        step("Проверить наличие информации о работе в Нефтегазовой промышленности на странице", () -> {
-            mainPage
-                    .checkActivityListIsPresent();
-        });
+        oilGasPage
+                .checkActivityListIsPresent();
     }
 
     @Test
@@ -102,23 +81,15 @@ public class CenticoreTests extends TestBase {
     @Severity(SeverityLevel.BLOCKER)
     @Link(value = "MainPageHeader", url = MAIN_PAGE_URL)
     @DisplayName("Проверка перехода на раздел «Продукты/Шторм Блокчейн»")
-    void checkStormBlockChainOnProductsTab () {
+    void checkStormBlockChainOnProductsTab() {
 
-        step("Перейти на главную страницу", () -> {
-            mainPage
-                    .openPage();
-        });
+        mainPage
+                .openPage()
+                .hoverProductTab()
+                .clickOnStormBlockChainTab();
 
-        step("Открыть раздел «Шторм Блокчейн»", () -> {
-            mainPage
-                    .hoverProductTab()
-                    .clickOnStormBlockChainTab();
-        });
-
-        step("Проверить наличие информации о преимуществах Шторм Блокчейн на странице", () -> {
-            mainPage
-                    .checkProtocolBlockChainListIsPresent();
-        });
+        stormBlockChainPage
+                .checkProtocolBlockChainListIsPresent();
     }
 
     @Test
@@ -128,22 +99,14 @@ public class CenticoreTests extends TestBase {
     @Severity(SeverityLevel.BLOCKER)
     @Link(value = "MainPageHeader", url = MAIN_PAGE_URL)
     @DisplayName("Проверка перехода на раздел «Карьера/Вакансии»")
-    void checkVacanciesOnCareerTab () {
+    void checkVacanciesOnCareerTab() {
 
-        step("Перейти на главную страницу", () -> {
-            mainPage
-                    .openPage();
-        });
+        mainPage
+                .openPage()
+                .hoverCareerTab()
+                .clickOnVacanciesTab();
 
-        step("Открыть раздел «Вакансии»", () -> {
-            mainPage
-                    .hoverCareerTab()
-                    .clickOnVacanciesTab();
-        });
-
-        step("Проверить наличие информации о вакансиях на странице", () -> {
-            mainPage
-                    .checkVacanciesListIsPresent();
-        });
+        careerPage
+                .checkVacanciesListIsPresent();
     }
 }
