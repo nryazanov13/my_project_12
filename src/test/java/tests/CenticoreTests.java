@@ -5,7 +5,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import pages.*;
 
-@DisplayName("Класс для проверки функциональности переходов на главной странице")
+@DisplayName("Класс для проверки функциональности переходов на главной странице ")
 public class CenticoreTests extends TestBase {
 
     private final String
