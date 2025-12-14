@@ -49,7 +49,7 @@ ____
 ## <img alt="Jenkins" height="25" src="images/logo/Jenkins.svg" width="25"/></a><a name="Сборка"></a>Сборка в [Jenkins](https://jenkins.autotests.cloud/job/037-sandraboticelli-escaperoom-12/)</a>
 ____
 <p align="center">  
-<a href="https://jenkins.autotests.cloud/job/037-sandraboticelli-escaperoom-12/"><img src="images/screen/jenkins.png" alt="Jenkins" width="950"/></a>  
+<a href="https://jenkins.autotests.cloud/job/my_project_12/"><img src="images/screen/jenkins.png" alt="Jenkins" width="950"/></a>  
 </p>
 
 
