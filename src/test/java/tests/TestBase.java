@@ -15,7 +15,6 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.util.Map;
 
-
 public class TestBase {
 
     static CredentialsConfig config = ConfigFactory.create(CredentialsConfig.class);

@@ -56,7 +56,6 @@ public class CenticoreTests extends TestBase {
                 .checkTechnologiesListIsPresent();
     }
 
-
     @Test
     @Feature("Проверка таба навигации на главной странице")
     @Story("Я как пользователь хочу иметь возможность ознакомиться с информацией о Нефтегазовой промышленности в разделе «Экспертиза»")
@@ -140,5 +139,4 @@ public class CenticoreTests extends TestBase {
         contactsTab
                 .checkContactsListIsPresent();
     }
-
 }
