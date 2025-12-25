@@ -1,4 +1,4 @@
-## <a href="https://escape-room-neon.vercel.app/"><img alt="EscapeRoom" height="52" src="images/logo/logo.svg" width="134"/></a>
+## <a href="https://centicore.ru/"><img alt="Centicore" height="52" src="images/logo/logo.svg" width="134"/></a>
 # Проект по автоматизации тестирования для компании [Centicore](https://centicore.ru/)
 
 * [Репозиторий с проектом](https://github.com/nryazanov13/my_project_12/blob/master/README.md)
@@ -46,7 +46,7 @@ ____
 
 ____
 <a id="jenkins"></a>
-## <img alt="Jenkins" height="25" src="images/logo/Jenkins.svg" width="25"/></a><a name="Сборка"></a>Сборка в [Jenkins](https://jenkins.autotests.cloud/job/037-sandraboticelli-escaperoom-12/)</a>
+## <img alt="Jenkins" height="25" src="images/logo/Jenkins.svg" width="25"/></a><a name="Сборка"></a>Сборка в [Jenkins](https://jenkins.autotests.cloud/job/my_project_12/)</a>
 ____
 <p align="center">  
 <a href="https://jenkins.autotests.cloud/job/my_project_12/"><img src="images/screen/jenkins.png" alt="Jenkins" width="950"/></a>  
@@ -78,7 +78,7 @@ clean test
 ```
 ___
 <a id="allure"></a>
-## <img alt="Allure" height="25" src="images/logo/Allure.svg" width="25"/></a> <a name="Allure"></a>Allure [отчет](https://jenkins.autotests.cloud/job/037-sandraboticelli-escaperoom-12/allure/)</a>
+## <img alt="Allure" height="25" src="images/logo/Allure.svg" width="25"/></a> <a name="Allure"></a>Allure [отчет](https://jenkins.autotests.cloud/job/my_project_12/allure/)</a>
 ___
 
 ### *Основная страница отчёта*

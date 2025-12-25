@@ -17,7 +17,10 @@ public class MainPage {
             productsTab = $("a[href='/products/']"),
             stormBlockChainTab = $("a[href='/products/storm-blockchain/']"),
             careerTab = $("a[href='/career/']"),
-            vacanciesTab = $("a[href='/vacancies/']");
+            vacanciesTab = $("a[href='/vacancies/']"),
+            pressCenterTab = $("a[href='/news/']"),
+            blogTab = $("a[href='/news/']"),
+            contactsTab = $("a[href='/contacts/']");
 
 
     @Step("Открыли главную страницу")
@@ -56,6 +59,12 @@ public class MainPage {
         return this;
     }
 
+    @Step("Навели курсор на раздел «Пресс-центр»")
+    public MainPage hoverPressCenterTab() {
+        pressCenterTab.hover();
+        return this;
+    }
+
     @Step("Кликнуть на раздел «Наша история»")
     public MainPage clickOnOurHistoryTab() {
         ourHistoryTab.click();
@@ -86,4 +95,15 @@ public class MainPage {
         return this;
     }
 
+    @Step("Кликнуть на раздел «Блог»")
+    public MainPage clickOnBlogTab() {
+        blogTab.click();
+        return this;
+    }
+
+    @Step("Кликнуть на раздел «Контакты»")
+    public MainPage clickContactsTab() {
+        contactsTab.click();
+        return this;
+    }
 }
